@@ -1,3 +1,28 @@
 #argentinaPrograma{
     color: rgb(0, 212, 212);
 }
+
+.figura-card {
+    border-radius: 30px;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+.profile-image{
+    position: relative;
+    border-radius: 50%;
+    width: 13%;
+    margin-top: -100px;
+    z-index: 1;
+}
+
+.info{
+    bottom:50px;
+}
+
+.edit{
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
