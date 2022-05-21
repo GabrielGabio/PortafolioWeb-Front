@@ -51,9 +51,16 @@
     align-items: center;
 }
 
+/* Iconos de editar, borrar y agregar */
+.icon-red-edit {
+    color: #900C3F;
+
+}
+
 /* Pruebas */
 
 #circle-container{
     width:200px;
     height:200px;
 }
+
