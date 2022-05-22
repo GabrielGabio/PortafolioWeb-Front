@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+#argentinaPrograma {
+  color: rgb(0, 212, 212);
+}
+
+#siglo {
+  height: 50px;
+}
+
+#img-insr {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+
+
+.box-img-insr {
+  margin-right: 17.559px;
+}
+
+.box-img-java {
+  margin-right: 45.567px;
+}
+
+.figura-card {
+  border-radius: 30px;
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+.profile-image {
+  position: relative;
+  border-radius: 50%;
+  width: 13%;
+  margin-top: -100px;
+  z-index: 1;
+}
+
+.info {
+  bottom: 50px;
+}
+
+.edit {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-logos {
+  display: flex;
+  align-items: center;
+}
+
+/* Iconos de editar, borrar y agregar */
+.icon-red-edit {
+  color: #900C3F;
+
+}
+
+/* Pruebas */
+
+#circle-container {
+  width: 200px;
+  height: 200px;
+}
