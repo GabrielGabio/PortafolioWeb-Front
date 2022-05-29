@@ -1,0 +1,107 @@
+{
+  "name": "Gabriel Gabio",
+  "program": "Argentina Programa",
+  "presentacion": {
+    "backImage": "https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?cs=srgb&dl=pexels-negative-space-97077.jpg&fm=jpg",
+    "imgProfile": "",
+    "name": "Gabriel Gabio",
+    "study": "Estudiante de Licenciatura en Informática",
+    "curse": "Futuro Full Stack Developer Jr.",
+    "ubi": "Río Negro - Argentina"
+  },
+  "educacion": [
+    {
+      "school": "Siglo 21",
+      "title": "Licenciatura en Informática",
+      "start": "2018",
+      "end": "Presente",
+      "img": "https://scontent.fgnr1-1.fna.fbcdn.net/v/t1.6435-9/42201335_10156649902243493_7868135844366778368_n.png?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeH3ZHIvdkMv89FBIJTdNcdfTBv8ppXZD69MG_ymldkPr5KesaXtOgRcyw0xuwvUS834qSvU7GoZjhjG6YKMBfu-&_nc_ohc=kdtZnnXNjgkAX8Kw_yn&_nc_ht=scontent.fgnr1-1.fna&oh=00_AT-_Z1FyV4H1xYrlTrUkqotgX8ACGpofhe84YxA9KLVk1Q&oe=62B36196",
+      "enlace": "https://21.edu.ar/"
+    },
+    {
+      "school": "Global Mentoring",
+      "title": "Java de cero a experto",
+      "start": "2018",
+      "end": "2019",
+      "img": "https://cdn-icons-png.flaticon.com/512/311/311288.png?w=826",
+      "enlace":"https://www.globalmentoring.com.mx/"
+    },
+    {
+      "school": "Instituto Nuestra Señora del Rosario",
+      "title": "Técnico Mecánico",
+      "start": "2008",
+      "end": "2014",
+      "img": "https://img2.freepng.es/20190624/hc/kisspng-saint-giovanni-bosco-salesians-of-don-bosco-school-don-bosco-logo-png-vector-clipart-psd-peoplepn-5d10e7daad5785.62906679156138901871.jpg",
+      "enlace": "https://www.facebook.com/insrvr/"
+    }
+  ],
+  "aptitudes": [
+    {
+      "name": "Inglés",
+      "progress": "barra-baja",
+      "valor":"33",
+      "alias": "Bajo",
+      "color": "bg-danger"
+    },
+    {
+      "name": "Capacidad de Adaptación",
+      "progress": "barra-alta",
+      "valor":"100",
+      "alias": "Alto",
+      "color": "bg-success"
+    },
+    {
+      "name": "Trabajo en Equipo",
+      "progress": "barra-media-alta",
+      "valor":"80",
+      "alias": "Medio-Alto"
+    },
+    {
+      "name": "Compromiso",
+      "progress": "barra-alta",
+      "valor":"100",
+      "alias": "Alto",
+      "color":"bg-success"
+    },
+    {
+      "name": "Flexibilidad",
+      "progress": "barra-media-alta",
+      "valor":"80",
+      "alias": "Medio-Alto"
+    },
+    {
+      "lenguajes": [
+        {
+          "name": "Java",
+          "progress": "20"
+        },
+        {
+          "name": "HTML-CSS-JavaScript",
+          "progress": "20"
+        },
+        {
+          "name": "TypeScript",
+          "progress": "20"
+        },
+        {
+          "name": "SQL",
+          "progress": "20"
+        },
+        {
+          "name": "Ruby",
+          "progress": "20"
+        }
+      ]
+    }
+  ],
+  "proyecto": [
+    {
+      "name": "PortafolioWeb",
+      "start": "2021",
+      "end": "2022",
+      "about": "Desarrollamos un sitio web de un portafolio personal, con su parte de FrontEnd basado en Angular y con BootStrap. Con posibilidad de poder logear en el sitio y editar todas las caracteristicas del portafolio.",
+      "urlGitHub": "https://github.com/GabrielGabio/PortafolioWeb-Front",
+      "urlPortafolio": "#"
+    }
+  ]
+}
