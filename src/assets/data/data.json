@@ -24,7 +24,7 @@
       "start": "2018",
       "end": "2019",
       "img": "https://cdn-icons-png.flaticon.com/512/311/311288.png?w=826",
-      "enlace":"https://www.globalmentoring.com.mx/"
+      "enlace": "https://www.globalmentoring.com.mx/"
     },
     {
       "school": "Instituto Nuestra Señora del Rosario",
@@ -39,69 +39,68 @@
     {
       "name": "Inglés",
       "progress": "barra-baja",
-      "valor":"33",
+      "valor": "33",
       "alias": "Bajo",
       "color": "bg-danger"
     },
     {
       "name": "Capacidad de Adaptación",
       "progress": "barra-alta",
-      "valor":"100",
+      "valor": "100",
       "alias": "Alto",
       "color": "bg-success"
     },
     {
       "name": "Trabajo en Equipo",
       "progress": "barra-media-alta",
-      "valor":"80",
+      "valor": "80",
       "alias": "Medio-Alto"
     },
     {
       "name": "Compromiso",
       "progress": "barra-alta",
-      "valor":"100",
+      "valor": "100",
       "alias": "Alto",
-      "color":"bg-success"
+      "color": "bg-success"
     },
     {
       "name": "Flexibilidad",
       "progress": "barra-media-alta",
-      "valor":"80",
+      "valor": "80",
       "alias": "Medio-Alto"
     },
     {
-      "lenguajes": [
-        {
-          "name": "Java",
-          "progress": "20"
-        },
-        {
-          "name": "HTML-CSS-JavaScript",
-          "progress": "20"
-        },
-        {
-          "name": "TypeScript",
-          "progress": "20"
-        },
-        {
-          "name": "SQL",
-          "progress": "20"
-        },
-        {
-          "name": "Ruby",
-          "progress": "20"
-        }
-      ]
+      "name": "Java",
+      "progress": "barra-media-alta",
+      "valor": "80",
+      "alias": "Medio-Alto"
+    },
+    {
+      "name": "HTML-CSS-JavaScript",
+      "progress": "barra-media-alta",
+      "valor": "80",
+      "alias": "Medio-Alto"
+    },
+    {
+      "name": "SQL",
+      "progress": "barra-media-alta",
+      "valor": "80",
+      "alias": "Medio-Alto"
     }
   ],
   "proyecto": [
     {
       "name": "PortafolioWeb",
+      "time": "Fecha de realización: ",
       "start": "2021",
       "end": "2022",
       "about": "Desarrollamos un sitio web de un portafolio personal, con su parte de FrontEnd basado en Angular y con BootStrap. Con posibilidad de poder logear en el sitio y editar todas las caracteristicas del portafolio.",
+      "titleUrlGitHub": "Link a GitHub: ",
       "urlGitHub": "https://github.com/GabrielGabio/PortafolioWeb-Front",
-      "urlPortafolio": "#"
+      "textUrlGitHub":"Proyecto-PortafolioWeb",
+      "titleUrlPortafolio": "Link a PortafolioWeb: ",
+      "urlPortafolio": "#",
+      "textUrlPortafolio":"PortafolioWeb"
     }
   ]
 }
