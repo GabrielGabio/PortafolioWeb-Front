@@ -8,8 +8,12 @@ import { PresentacionComponent } from './componentes/presentacion/presentacion.c
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { AtributosDestrezasComponent } from './componentes/atributos-destrezas/atributos-destrezas.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PorfolioService } from './servicios/porfolio.service';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InterceptorService } from './servicios/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -18,14 +22,18 @@ import { PorfolioService } from './servicios/porfolio.service';
     PresentacionComponent,
     EducacionComponent,
     AtributosDestrezasComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    IniciarSesionComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [PorfolioService],
+  providers: [PorfolioService,
+  {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

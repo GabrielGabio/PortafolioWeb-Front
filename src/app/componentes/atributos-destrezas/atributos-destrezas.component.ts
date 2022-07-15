@@ -11,9 +11,9 @@ export class AtributosDestrezasComponent implements OnInit {
   constructor(private datosPorfolio: PorfolioService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe((data) => {
-      console.log(data);
-      this.aptitudesList = data.aptitudes;
+    this.datosPorfolio.obtenerDatosAptitudes().subscribe((data) => {
+      console.log('Aptitudes: ' + JSON.stringify(data));
+      this.aptitudesList = data//.aptitudes;
     })
   }
 

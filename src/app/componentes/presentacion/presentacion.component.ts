@@ -11,9 +11,9 @@ export class PresentacionComponent implements OnInit {
   constructor(private datosPorfolio: PorfolioService) {}
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe((data) => {
-      console.log(data);
-      this.miPorfolio = data;
+    this.datosPorfolio.obtenerDatosPresentacion().subscribe((data) => {
+      console.log("Presentacion: " + JSON.stringify(data));
+      this.miPorfolio = data[0];
     });
   }
 }

@@ -1,0 +1,39 @@
+<div class="text-center" style="">
+  <main class="form-signin w-100 m-auto" style="max-width: 300px;">
+    <form [formGroup]="form" data-dashlane-rid="fb7708f186d82e4d" data-form-type="login" (ngSubmit)="onEnviar($event)">
+      <h1 class="h3 mb-3 fw-normal">Iniciar Sesión</h1>
+
+      <div class="form-floating">
+        <input type="text" formControlName="nombreUsuario" class="form-control" id="floatingInput" placeholder="Usuario"
+          [ngClass]="{'is-invalid': NombreUsuario?.errors && NombreUsuario?.touched, 'is-valid': !NombreUsuario?.errors && NombreUsuario?.touched}"
+          data-dashlane-rid="e950e8f37c13f1c4" data-kwimpalastatus="alive" data-kwimpalaid="1655592317579-0"
+          data-form-type="email">
+        <label for="floatingInput">Usuario</label>
+        <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
+          <p *ngIf="NombreUsuario?.hasError('required')" class=text-danger>El Usuario es requerido.</p>
+        </div>
+      </div>
+      <div class="form-floating">
+        <input type="password" formControlName="password" class="form-control" id="floatingPassword"
+          [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
+          placeholder="Contraseña" data-dashlane-rid="2ed99d38e248ae5d" data-kwimpalastatus="alive"
+          data-kwimpalaid="1655592317579-1" data-form-type="password">
+        <label for="floatingPassword">Contraseña</label>
+        <div *ngIf="Password?.errors && Password?.touched">
+          <p *ngIf="Password?.hasError('required')" class=text-danger>La contraseña es requerida.</p>
+          <p *ngIf="Password?.errors?.['minlength']" class=text-danger>La contraseña debe ser de 8 o más caracteres.</p>
+        </div>
+      </div>
+      <div class="checkbox mb-3">
+        <label data-dashlane-label="true">
+          <input type="checkbox" value="remember-me" data-dashlane-rid="0725858cbdf360fb"
+            data-form-type="consent,rememberme">
+          Recúerdame
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit" data-dashlane-rid="fe628bb1981838c8"
+        data-dashlane-label="true" data-form-type="action,login">Enviar</button>
+      <p class="mt-5 mb-3 text-muted">© 2022</p>
+    </form>
+  </main>
+</div>
