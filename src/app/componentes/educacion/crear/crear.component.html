@@ -1,0 +1,48 @@
+<app-encabezado></app-encabezado>
+<h1 style="margin: 20px;max-width: none;">Educación</h1>
+<div class="container">
+  <form (ngSubmit)="onCrear()" novalidate #f="ngForm">
+    <ul class=" list-group-flush" style="padding:0;">
+      <li class="row" style="max-width: 50%;margin:20px auto;">
+        <label for="disabledTextInput" class="form-label fw-bolder" id="centro">Logo y dirección url</label>
+        <div class="col">
+          <input type="text" class="form-control" required [(ngModel)]="img" name="img"
+            placeholder="Ej: https://docs.angular.lat/assets/images/logos/angular/angular.png">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" required [(ngModel)]="enlace" name="enlace" placeholder="https://docs.angular.lat/">
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Nombre Colegio</label>
+            <input type="text" class="form-control" required [(ngModel)]="school" name="school" placeholder="Universidad de Buenos Aires">
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Nombre del Título</label>
+            <input type="text" class="form-control" required [(ngModel)]="title" name="title" placeholder="Licenciado en Informática">
+          </div>
+        </div>
+      </li>
+      <div class="row" style="max-width: 50%;margin:20px auto;">
+        <label for="disabledTextInput" class="form-label fw-bolder">Fecha de realización</label>
+        <div class="col">
+          <input type="text" class="form-control" required [(ngModel)]="comienzo" name="comienzo" placeholder="2.012">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" required [(ngModel)]="fin" name="fin" placeholder="2.016">
+        </div>
+      </div>
+      <hr class="py-1">
+    </ul>
+
+    <div class="mb-3" style="text-align:center;">
+      <button class="btn btn-primary btn-lg" [disabled]="!f.valid">Actualizar</button>
+    </div>
+
+  </form>

@@ -12,8 +12,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PorfolioService } from './servicios/porfolio.service';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InterceptorService } from './servicios/interceptor.service';
+import { EditarComponent } from './componentes/educacion/editar/editar.component';
+import { CrearComponent } from './componentes/educacion/crear/crear.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,13 +28,17 @@ import { InterceptorService } from './servicios/interceptor.service';
     AtributosDestrezasComponent,
     ProyectosComponent,
     IniciarSesionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    EditarComponent,
+    CrearComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+
   ],
   providers: [PorfolioService,
   {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],

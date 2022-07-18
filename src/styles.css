@@ -1,4 +1,9 @@
-
+#centro{
+  text-align: center;
+}
+#izquierda{
+text-align:left;
+}
 #argentinaPrograma {
   color: rgb(0, 212, 212);
 }

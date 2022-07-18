@@ -39,14 +39,14 @@
           </div>
           <div class="edit-logos">
             <div>
-              <h2 class="card-title">{{proyecto.name}}</h2>
-              <h5 class="card-subtitle">{{proyecto.fecha}}
+              <h2 class="card-title" id="izquierda">{{proyecto.name}}</h2>
+              <h5 class="card-subtitle" id="izquierda">{{proyecto.fecha}}
                 {{proyecto.comienzo}}-{{proyecto.fin}}</h5>
-              <p class="card-text">{{proyecto.about}}<br> {{proyecto.titleUrlGitHub}}<a
+              <p class="card-text" id="izquierda">{{proyecto.about}}<br> {{proyecto.titleUrlGitHub}}<a
                   [href]="proyecto.urlGitHub" target="_blank"><span
                     class="badge rounded-pill bg-info text-white">{{proyecto.textUrlGitHub}}</span></a>
-                <br>{{proyecto.titleUrlPortafolio}} <a [href]="proyecto.urlPortafolio" target="_blank"><span
-                    class="badge rounded-pill bg-info text-white">{{proyecto.textUrlPortafolio}}</span></a>
+                <br>{{proyecto.titleUrlPortfolio}} <a [href]="proyecto.urlPortfolio" target="_blank"><span
+                    class="badge rounded-pill bg-info text-white">{{proyecto.textUrlPortfolio}}</span></a>
               </p>
             </div>
           </div>
