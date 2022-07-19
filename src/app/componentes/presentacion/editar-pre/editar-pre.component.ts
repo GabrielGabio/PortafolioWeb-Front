@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Educacion } from 'src/app/model/Educacion.1';
+import { Presentacion } from 'src/app/model/Presentacion';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
-  selector: 'app-editar',
-  templateUrl: './editar.component.html',
-  styleUrls: ['./editar.component.css'],
+  selector: 'app-editar-pre',
+  templateUrl: './editar-pre.component.html',
+  styleUrls: ['./editar-pre.component.css'],
 })
-export class EditarComponent implements OnInit {
-  educacion: Educacion;
+export class EditarPreComponent implements OnInit {
+  presentacion: Presentacion;
 
   constructor(
     private datosPorfolio: PorfolioService,
@@ -19,16 +19,16 @@ export class EditarComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.datosPorfolio.buscarDatosEducacion(id).subscribe((data) => {
-      console.log('Datos educacion: ' + JSON.stringify(data));
-      this.educacion = data;
+    this.datosPorfolio.buscarDatoPresentacion(id).subscribe((data) => {
+      console.log('Datos Presentacion: ' + JSON.stringify(data));
+      this.presentacion = data;
     });
   }
 
   onActualizar(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     this.datosPorfolio
-      .actualizarDatosEducacion(id, this.educacion)
+      .actualizarDatosPresentacion(id, this.presentacion)
       .subscribe((data) => {
         console.log('Datos actualizados: ' + JSON.stringify(data));
         this.ruta.navigate(['/portfolio']);

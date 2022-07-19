@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InterceptorService } from './servicios/interceptor.service';
 import { EditarComponent } from './componentes/educacion/editar/editar.component';
 import { CrearComponent } from './componentes/educacion/crear/crear.component';
+import { EditarPreComponent } from './componentes/presentacion/editar-pre/editar-pre.component';
 
 
 
@@ -30,7 +31,8 @@ import { CrearComponent } from './componentes/educacion/crear/crear.component';
     IniciarSesionComponent,
     PortfolioComponent,
     EditarComponent,
-    CrearComponent
+    CrearComponent,
+    EditarPreComponent
   ],
   imports: [
     BrowserModule,

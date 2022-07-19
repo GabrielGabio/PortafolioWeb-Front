@@ -1,0 +1,64 @@
+<app-encabezado></app-encabezado>
+<h1 style="text-align:center;margin: 20px;">Edición de Presentación</h1>
+<div class="container" *ngIf="presentacion">
+  <form (ngSubmit)="onActualizar()" novalidate #f="ngForm">
+    <ul class=" list-group-flush" style="padding:0;">
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Foto de perfil</label>
+            <input type="text" class="form-control" [(ngModel)]="presentacion.imgProfile" name="imgProfile">
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Nombre</label>
+            <input type="text" class="form-control" required [(ngModel)]="presentacion.name"
+              name="name">
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Estudio</label>
+            <input type="text" class="form-control"  [(ngModel)]="presentacion.study"
+              name="study">
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Cursando</label>
+            <input type="text" class="form-control"  [(ngModel)]="presentacion.curse" name="curse">
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Ubicación</label>
+            <input type="text" class="form-control" required [(ngModel)]="presentacion.ubi" name="ubi">
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Imagen de fondo</label>
+            <input type="text" class="form-control" [(ngModel)]="presentacion.backImage" name="backImage">
+          </div>
+        </div>
+      </li>
+
+      <hr class="py-1">
+    </ul>
+
+    <div class="mb-3" style="text-align:center;">
+      <button class="btn btn-primary btn-lg" [disabled]="!f.valid">Actualizar</button>
+    </div>
+
+  </form>
