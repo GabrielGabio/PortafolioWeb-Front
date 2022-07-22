@@ -17,6 +17,10 @@ import { InterceptorService } from './servicios/interceptor.service';
 import { EditarComponent } from './componentes/educacion/editar/editar.component';
 import { CrearComponent } from './componentes/educacion/crear/crear.component';
 import { EditarPreComponent } from './componentes/presentacion/editar-pre/editar-pre.component';
+import { NewAtriComponent } from './componentes/atributos-destrezas/new-atri/new-atri.component';
+import { EditAtriComponent } from './componentes/atributos-destrezas/edit-atri/edit-atri.component';
+import { NewProComponent } from './componentes/proyectos/new-pro/new-pro.component';
+import { EditProComponent } from './componentes/proyectos/edit-pro/edit-pro.component';
 
 
 
@@ -32,7 +36,11 @@ import { EditarPreComponent } from './componentes/presentacion/editar-pre/editar
     PortfolioComponent,
     EditarComponent,
     CrearComponent,
-    EditarPreComponent
+    EditarPreComponent,
+    NewAtriComponent,
+    EditAtriComponent,
+    NewProComponent,
+    EditProComponent
   ],
   imports: [
     BrowserModule,

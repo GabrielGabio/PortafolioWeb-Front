@@ -10,14 +10,16 @@
             placeholder="Ej: https://docs.angular.lat/assets/images/logos/angular/angular.png">
         </div>
         <div class="col">
-          <input type="text" class="form-control" required [(ngModel)]="enlace" name="enlace" placeholder="https://docs.angular.lat/">
+          <input type="text" class="form-control" required [(ngModel)]="enlace" name="enlace"
+            placeholder="https://docs.angular.lat/">
         </div>
       </li>
       <li class="list-group-item">
         <div class="container">
           <div class="mb-3">
             <label for="disabledTextInput" class="form-label fw-bolder">Nombre Colegio</label>
-            <input type="text" class="form-control" required [(ngModel)]="school" name="school" placeholder="Universidad de Buenos Aires">
+            <input type="text" class="form-control" required [(ngModel)]="school" name="school"
+              placeholder="Universidad de Buenos Aires">
           </div>
         </div>
       </li>
@@ -25,24 +27,26 @@
         <div class="container">
           <div class="mb-3">
             <label for="disabledTextInput" class="form-label fw-bolder">Nombre del Título</label>
-            <input type="text" class="form-control" required [(ngModel)]="title" name="title" placeholder="Licenciado en Informática">
+            <input type="text" class="form-control" required [(ngModel)]="title" name="title"
+              placeholder="Licenciado en Informática">
           </div>
         </div>
       </li>
-      <div class="row" style="max-width: 50%;margin:20px auto;">
-        <label for="disabledTextInput" class="form-label fw-bolder">Fecha de realización</label>
-        <div class="col">
-          <input type="text" class="form-control" required [(ngModel)]="comienzo" name="comienzo" placeholder="2.012">
+      <li class="list-group-item">
+        <div class="row" style="max-width: 50%;margin: auto;">
+          <label for="disabledTextInput" class="form-label fw-bolder">Fecha de realización</label>
+          <div class="col">
+            <input type="text" class="form-control" required [(ngModel)]="comienzo" name="comienzo" placeholder="2.012">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" required [(ngModel)]="fin" name="fin" placeholder="2.016">
+          </div>
         </div>
-        <div class="col">
-          <input type="text" class="form-control" required [(ngModel)]="fin" name="fin" placeholder="2.016">
-        </div>
-      </div>
-      <hr class="py-1">
+      </li>
     </ul>
 
     <div class="mb-3" style="text-align:center;">
-      <button class="btn btn-primary btn-lg" [disabled]="!f.valid">Actualizar</button>
+      <button class="btn btn-primary btn-lg" [disabled]="!f.valid">Añadir</button>
     </div>
 
   </form>

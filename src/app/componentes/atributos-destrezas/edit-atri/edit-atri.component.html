@@ -1,0 +1,23 @@
+<app-encabezado></app-encabezado>
+<h1 style="text-align:center;margin: 20px;">Edición de Aptitudes y Destrezas</h1>
+<div class="container" *ngIf="aptitudes">
+  <form (ngSubmit)="onActualizar()" novalidate #f="ngForm" >
+    <ul class="list-group-flush" style="padding:0;">
+      <li class="list-group-item">
+        <div class="container">
+          <label for="disabledTextInput" class="form-label fw-bolder">Nombre</label>
+          <input type="text" class="form-control" required [value]="aptitudes.name" [(ngModel)]="aptitudes.name" id="name" [ngModelOptions]="{standalone:true}">
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="container">
+          <label for="disabledTextInput" class="form-label fw-bolder">Nivel</label>
+          <input type="text" class="form-control" required [value]="aptitudes.valor" [(ngModel)]="aptitudes.valor" id="val" [ngModelOptions]="{standalone:true}">
+        </div>
+      </li>
+    </ul>
+    <div class="mb-3" style="text-align:center;">
+      <button class="btn btn-primary btn-lg" [disabled]="!f.valid">Actualizar</button>
+    </div>
+  </form>
+</div>

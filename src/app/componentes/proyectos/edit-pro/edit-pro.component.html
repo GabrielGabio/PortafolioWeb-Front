@@ -1,0 +1,65 @@
+<app-encabezado></app-encabezado>
+<h1 style="margin: 20px;max-width: none;">Educación</h1>
+<div class="container" *ngIf="proyecto">
+  <form (ngSubmit)="onActualizar()" novalidate #f="ngForm">
+    <ul class=" list-group-flush" style="padding:0;">
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Nombre Proyecto</label>
+            <input type="text" class="form-control" required [(ngModel)]="proyecto.name" name="name" [value]="proyecto.name">
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row" style="max-width: 50%;margin: auto;">
+          <label for="disabledTextInput" class="form-label fw-bolder">Fecha de realización</label>
+          <div class="col">
+            <input type="text" class="form-control" required [(ngModel)]="proyecto.comienzo" name="comienzo" [value]="proyecto.comienzo">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" required [(ngModel)]="proyecto.fin" name="fin" [value]="proyecto.fin">
+          </div>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="container">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label fw-bolder">Breve descripcion del proyecto</label>
+            <input type="text" class="form-control" required [(ngModel)]="proyecto.about" name="about" [value]="proyecto.about">
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row" style="max-width: 50%;margin: auto;">
+          <label for="disabledTextInput" class="form-label fw-bolder">Texto a mostrar en el enlace y link del
+            repositorio GitHub</label>
+          <div class="col">
+            <input type="text" class="form-control" required [(ngModel)]="proyecto.textUrlGitHub" name="textUrlGitHub">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" required [(ngModel)]="proyecto.urlGitHub" name="urlGitHub">
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row" style="max-width: 50%;margin: auto;">
+          <label for="disabledTextInput" class="form-label fw-bolder">Texto a mostrar en el enlace y link del
+            proyecto</label>
+          <div class="col">
+            <input type="text" class="form-control" required [(ngModel)]="proyecto.textUrlProyecto"
+              name="textUrlProyecto">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" required [(ngModel)]="proyecto.urlProyecto" name="urlProyecto">
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="mb-3" style="text-align:center;">
+      <button class="btn btn-primary btn-lg" [disabled]="!f.valid">Añadir</button>
+    </div>
+
+  </form>
