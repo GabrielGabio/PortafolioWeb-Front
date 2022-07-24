@@ -9,23 +9,62 @@ import { PortfolioComponent } from './componentes/portfolio/portfolio.component'
 import { EditarPreComponent } from './componentes/presentacion/editar-pre/editar-pre.component';
 import { EditProComponent } from './componentes/proyectos/edit-pro/edit-pro.component';
 import { NewProComponent } from './componentes/proyectos/new-pro/new-pro.component';
+import { ProdGuardService as guard } from './componentes/guards.service';
 
 const routes: Routes = [
-  { path: 'portfolio', component: PortfolioComponent },
+  {
+    path: 'portfolio',
+    component: PortfolioComponent,
+    canActivate: [guard], data: {expectedRol: ['admin','user']}
+  },
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: '', redirectTo: 'iniciar-sesion', pathMatch: 'full' },
-  { path: 'editar/:id', component: EditarComponent },
-  { path: 'crear', component: CrearComponent },
-  { path: 'editar-pre/:id', component: EditarPreComponent },
-  { path: 'new-atri', component: NewAtriComponent },
-  { path: 'edit-atri/:id', component: EditAtriComponent },
-  { path: 'new-pro', component: NewProComponent },
-  { path: 'edit-pro/:id', component: EditProComponent}
-
+  {
+    path: 'editar/:id',
+    component: EditarComponent,
+    canActivate: [guard],
+    data: { expectedRol: ['admin'] },
+  },
+  {
+    path: 'crear',
+    component: CrearComponent,
+    canActivate: [guard],
+    data: { expectedRol: ['admin'] },
+  },
+  {
+    path: 'editar-pre/:id',
+    component: EditarPreComponent,
+    canActivate: [guard],
+    data: { expectedRol: ['admin'] },
+  },
+  {
+    path: 'new-atri',
+    component: NewAtriComponent,
+    canActivate: [guard],
+    data: { expectedRol: ['admin'] },
+  },
+  {
+    path: 'edit-atri/:id',
+    component: EditAtriComponent,
+    canActivate: [guard],
+    data: { expectedRol: ['admin'] },
+  },
+  {
+    path: 'new-pro',
+    component: NewProComponent,
+    canActivate: [guard],
+    data: { expectedRol: ['admin'] },
+  },
+  {
+    path: 'edit-pro/:id',
+    component: EditProComponent,
+    canActivate: [guard],
+    data: { expectedRol: ['admin'] },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

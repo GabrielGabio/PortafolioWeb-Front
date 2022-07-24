@@ -5,12 +5,12 @@
     </div>
   </div>
   <div style="padding: 16px" id="izquierda">
-    <div class="">
-      <img class="profile-image" src="" alt="Foto de perfil" />
+    <div class="profile-image">
+      <img class="profile-image-img" [src]="pre.imgProfile" alt="Foto de perfil" />
     </div>
     <div class="info">
       <div class="text-end">
-        <div class="btn-edit">
+        <div class="btn-edit" *ngIf="isAdmin">
           <a routerLink="/editar-pre/{{pre.id}}"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
               fill="currentColor" class="bi bi-pencil-square icon-red-edit" viewBox="0 0 16 16">
               <path

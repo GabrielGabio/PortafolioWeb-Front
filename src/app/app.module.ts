@@ -8,12 +8,12 @@ import { PresentacionComponent } from './componentes/presentacion/presentacion.c
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { AtributosDestrezasComponent } from './componentes/atributos-destrezas/atributos-destrezas.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { PorfolioService } from './servicios/porfolio.service';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InterceptorService } from './servicios/interceptor.service';
+import { interceptorProvider } from './servicios/interceptor.service';
 import { EditarComponent } from './componentes/educacion/editar/editar.component';
 import { CrearComponent } from './componentes/educacion/crear/crear.component';
 import { EditarPreComponent } from './componentes/presentacion/editar-pre/editar-pre.component';
@@ -21,7 +21,6 @@ import { NewAtriComponent } from './componentes/atributos-destrezas/new-atri/new
 import { EditAtriComponent } from './componentes/atributos-destrezas/edit-atri/edit-atri.component';
 import { NewProComponent } from './componentes/proyectos/new-pro/new-pro.component';
 import { EditProComponent } from './componentes/proyectos/edit-pro/edit-pro.component';
-
 
 
 @NgModule({
@@ -47,11 +46,10 @@ import { EditProComponent } from './componentes/proyectos/edit-pro/edit-pro.comp
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule,
-
+    FormsModule
   ],
   providers: [PorfolioService,
-  {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
+  interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

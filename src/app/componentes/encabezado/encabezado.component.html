@@ -26,9 +26,14 @@
           </a>
         </li>
       </ul>
-      <div class="text-end">
-        <a routerLink="/iniciar-sesion" class="btn btn-outline-light me-2" role="button">
-          Login
+      <div class="text-end" *ngIf="!isLogged">
+        <a routerLink="/iniciar-sesion" class="btn btn-outline-light me-2" role="button" >
+          Iniciar Sesión
+        </a>
+      </div>
+      <div class="text-end" *ngIf="isLogged">
+        <a  class="btn btn-outline-light me-2" role="button" (click)="onLogOut()">
+          Cerrar Sesión
         </a>
       </div>
     </div>

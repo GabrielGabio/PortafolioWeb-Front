@@ -1,39 +1,35 @@
-<div class="text-center">
-  <main class="form-signin w-100 m-auto" style="max-width: 300px;">
-    <form [formGroup]="form" data-dashlane-rid="fb7708f186d82e4d" data-form-type="login" (ngSubmit)="onEnviar($event)">
-      <h1 class="h3 mb-3 fw-normal">Iniciar Sesión</h1>
 
-      <div class="form-floating">
-        <input type="text" formControlName="nombreUsuario" class="form-control" id="floatingInput" placeholder="Usuario"
-          [ngClass]="{'is-invalid': NombreUsuario?.errors && NombreUsuario?.touched, 'is-valid': !NombreUsuario?.errors && NombreUsuario?.touched}"
-          data-dashlane-rid="e950e8f37c13f1c4" data-kwimpalastatus="alive" data-kwimpalaid="1655592317579-0"
-          data-form-type="email">
-        <label for="floatingInput">Usuario</label>
-        <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
-          <p *ngIf="NombreUsuario?.hasError('required')" class=text-danger>El Usuario es requerido.</p>
-        </div>
-      </div>
-      <div class="form-floating">
-        <input type="password" formControlName="password" class="form-control" id="floatingPassword"
-          [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
-          placeholder="Contraseña" data-dashlane-rid="2ed99d38e248ae5d" data-kwimpalastatus="alive"
-          data-kwimpalaid="1655592317579-1" data-form-type="password">
-        <label for="floatingPassword">Contraseña</label>
-        <div *ngIf="Password?.errors && Password?.touched">
-          <p *ngIf="Password?.hasError('required')" class=text-danger>La contraseña es requerida.</p>
-          <p *ngIf="Password?.errors?.['minlength']" class=text-danger>La contraseña debe ser de 8 o más caracteres.</p>
-        </div>
-      </div>
-      <div class="checkbox mb-3">
-        <label data-dashlane-label="true">
-          <input type="checkbox" value="remember-me" data-dashlane-rid="0725858cbdf360fb"
-            data-form-type="consent,rememberme">
-          Recúerdame
-        </label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit" data-dashlane-rid="fe628bb1981838c8"
-        data-dashlane-label="true" data-form-type="action,login">Enviar</button>
-      <p class="mt-5 mb-3 text-muted">© 2022</p>
-    </form>
-  </main>
+<div class="text-center" *ngIf="isLogged; else loggedOut">
+  <h2>Ya has iniciado sesión</h2>
 </div>
+
+<ng-template #loggedOut>
+  <div class="container d-flex justify-content-center">
+    <div class="card">
+      <div class="card-header">
+        <div class="nav nav-tabs">
+          <div class="nav-item" style="margin-left: 49.57px;">
+            <a class="nav-link active" routerLink="/iniciar-sesion">Iniciar Sesión</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+          <div class="form-group">
+            <label for="nombreUsuario">Usuario</label>
+            <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control" [(ngModel)]="nombreUsuario"
+              required style="margin-bottom: 10px;">
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" class="form-control" [(ngModel)]="password" required style="margin-bottom: 10px;">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" [disabled]="!f.valid">
+              <i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { JwtDTO } from '../model/JwtDTO';
+import { LoginUsuario } from '../model/LoginUsuario';
+import { NuevoUsuario } from '../model/NuevoUsuario';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AutenticacionService {
   url = 'http://localhost:8080/auth/login';
-  currentUserSubject: BehaviorSubject<any>;
+  /*currentUserSubject: BehaviorSubject<any>;
   constructor(private http: HttpClient) {
     console.log('El servicio de autenticacion esta corriendo');
     this.currentUserSubject = new BehaviorSubject<any>(
@@ -29,6 +32,17 @@ export class AutenticacionService {
   get UsuarioAutenticado() {
     return this.currentUserSubject.value;
   }
+*/
 
-  
+  constructor(private httpClient: HttpClient) {
+    console.log('El servicio de auth esta corriendo');
+  }
+
+  public login(loginUsuario: LoginUsuario): Observable<JwtDTO> {
+    return this.httpClient.post<JwtDTO>(this.url, loginUsuario);
+  }
+
+  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
+    return this.httpClient.post<any>(this.url, nuevoUsuario);
+  }
 }
