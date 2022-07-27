@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/NuevoUsuario';
   providedIn: 'root',
 })
 export class AutenticacionService {
-  url = 'http://localhost:8080/auth/login';
+  url = 'https://aqueous-plains-67299.herokuapp.com/auth/login';
   /*currentUserSubject: BehaviorSubject<any>;
   constructor(private http: HttpClient) {
     console.log('El servicio de autenticacion esta corriendo');
