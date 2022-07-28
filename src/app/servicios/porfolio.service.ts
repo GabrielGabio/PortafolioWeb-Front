@@ -11,21 +11,20 @@ import { Proyectos } from '../model/Proyectos';
 })
 export class PorfolioService {
   constructor(private http: HttpClient) {}
+  url = 'https://aqueous-plains-67299.herokuapp.com/';
 
   obtenerDatosEncabezado(): Observable<any> {
-    return this.http.get('http://localhost:8080/encabezado/ver');
+    return this.http.get(this.url + 'encabezado/ver');
   }
 
   //Presentacion
 
   obtenerDatosPresentacion(): Observable<any> {
-    return this.http.get('http://localhost:8080/presentacion/ver');
+    return this.http.get(this.url + 'presentacion/ver');
   }
 
   buscarDatoPresentacion(id: number): Observable<Presentacion> {
-    return this.http.get<Presentacion>(
-      `http://localhost:8080/presentacion/ver/${id}`
-    );
+    return this.http.get<Presentacion>(this.url + `presentacion/ver/${id}`);
   }
 
   actualizarDatosPresentacion(
@@ -33,7 +32,7 @@ export class PorfolioService {
     presentacion: Presentacion
   ): Observable<any> {
     return this.http.put<any>(
-      `http://localhost:8080/presentacion/editar/${id}`,
+      this.url + `presentacion/editar/${id}`,
       presentacion
     );
   }
@@ -41,84 +40,67 @@ export class PorfolioService {
   //Aptitudes
 
   obtenerDatosAptitudes(): Observable<any> {
-    return this.http.get('http://localhost:8080/aptitudes/ver');
+    return this.http.get(this.url + 'aptitudes/ver');
   }
 
   obtenerDatoAptitud(id: number): Observable<Aptitudes> {
-    return this.http.get<Aptitudes>(
-      `http://localhost:8080/aptitudes/ver/${id}`
-    );
+    return this.http.get<Aptitudes>(this.url + `aptitudes/ver/${id}`);
   }
 
   actualizarDatosAptitudes(id: number, aptitudes: Aptitudes): Observable<any> {
-    return this.http.put<any>(
-      `http://localhost:8080/aptitudes/editar/${id}`,
-      aptitudes
-    );
+    return this.http.put<any>(this.url + `aptitudes/editar/${id}`, aptitudes);
   }
 
   crearAptitudes(aptitudes: Aptitudes): Observable<any> {
-    return this.http.post<any>(
-      'http://localhost:8080/aptitudes/new',
-      aptitudes
-    );
+    return this.http.post<any>(this.url + 'aptitudes/new', aptitudes);
   }
 
   eliminarDatoAptitud(id: number): Observable<any> {
-    return this.http.delete<any>(
-      `http://localhost:8080/aptitudes/borrar/${id}`
-    );
+    return this.http.delete<any>(this.url + `aptitudes/borrar/${id}`);
   }
   //Proyectos
 
   obtenerDatosProyectos(): Observable<any> {
-    return this.http.get('http://localhost:8080/proyectos/ver');
+    return this.http.get(this.url + 'proyectos/ver');
   }
 
   crearProyectos(proyectos: Proyectos): Observable<any> {
-    return this.http.post<any>('http://localhost:8080/proyectos/new', proyectos);
+    return this.http.post<any>(this.url + 'proyectos/new', proyectos);
   }
 
-  buscarProyecto(id: number): Observable<Proyectos>{
-    return this.http.get<Proyectos>(`http://localhost:8080/proyectos/ver/${id}`)
+  buscarProyecto(id: number): Observable<Proyectos> {
+    return this.http.get<Proyectos>(this.url + `proyectos/ver/${id}`);
   }
 
-  actualizarProyecto(id: number, proyectos: Proyectos): Observable<Proyectos>{
-    return this.http.put<Proyectos>(`http://localhost:8080/proyectos/editar/${id}`, proyectos);
+  actualizarProyecto(id: number, proyectos: Proyectos): Observable<Proyectos> {
+    return this.http.put<Proyectos>(
+      this.url + `proyectos/editar/${id}`,
+      proyectos
+    );
   }
 
-  eliminarProyecto(id: number): Observable<any>{
-    return this.http.delete<any>(`http://localhost:8080/proyectos/borrar/${id}`);
+  eliminarProyecto(id: number): Observable<any> {
+    return this.http.delete<any>(this.url + `proyectos/borrar/${id}`);
   }
   //Educacion
 
   obtenerDatosEducacion(): Observable<Educacion[]> {
-    return this.http.get<Educacion[]>('http://localhost:8080/educacion/ver');
+    return this.http.get<Educacion[]>(this.url + 'educacion/ver');
   }
 
   actualizarDatosEducacion(id: number, educacion: Educacion): Observable<any> {
-    return this.http.put<any>(
-      `http://localhost:8080/educacion/editar/${id}`,
-      educacion
-    );
+    return this.http.put<any>(this.url + `educacion/editar/${id}`, educacion);
   }
 
   buscarDatosEducacion(id: number): Observable<Educacion> {
-    return this.http.get<Educacion>(
-      `http://localhost:8080/educacion/ver/${id}`
-    );
+    return this.http.get<Educacion>(this.url + `educacion/ver/${id}`);
   }
 
   eliminarDatoEducacion(id: number): Observable<any> {
-    return this.http.delete<any>(
-      `http://localhost:8080/educacion/borrar/${id}`
-    );
+    return this.http.delete<any>(this.url + `educacion/borrar/${id}`);
   }
 
   crearEducacion(educacion: Educacion): Observable<any> {
-    return this.http.post<any>(
-      'http://localhost:8080/educacion/new',
-      educacion
-    );
+    return this.http.post<any>(this.url + 'educacion/new', educacion);
   }
 }
